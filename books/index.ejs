@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <!-- if use "=" it escapes special characters and we end up a string value instead of raw html -->
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="book-content">
+      <h2 class="all-books">All Books</h2>
+      <div class="books">
+        <!-- check if there is a book -->
+        <% if (books.length > 0){ %>
+        <!-- loop the data -->
+        <% books.forEach(book => { %>
+        <div class="books-content">
+          <a class="single" href="/books/<%= book._id %>">
+            <h3>Title:<%= book.title %></h3>
+          </a>
+          <p>Author:<%= book.author %></p>
+        </div>
+        <% }) %> <% } else{ %>
+        <h2>No Books to display</h2>
+        <%} %>
+      </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: "Roboto", sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(14, 81, 190);
+}
+
+a:hover{
+    color: rgb(34, 185, 230);
+    transition: all ease 500ms;
+}
+
+nav {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  width: 13%;
+}
+
+nav a {
+    color: rgb(7, 116, 155);
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: none;
+    position: absolute;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.1rem;
+    width: 0%;
+    background-color: rgb(12, 121, 216);
+    transition: width ease 500ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50%;
+}
+
+.book-content {
+    margin-top: 10rem;
+}
+
+.book-content .all-books {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.books-content {
+    width:fit-content;
+    height: fit-content;
+    line-height: 2rem;
+    padding: 2.5rem 3rem;
+    position: relative;
+}
+
+.books-content::before {
+   content: "";
+   position: absolute;
+   width: 0.5rem;
+   height: 50%;
+   background-color: rgba(169, 16, 16, 0.894);
+   left: 5%;
+   top: 50%;
+   transform: translate(-5%, -50%);
+}
+
+.books-content h2 {
+    color: rgb(4, 111, 119);
+}
+
+.books-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+}
+
+form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 2rem;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
+
+
+
+
+form input {
+    font-size: 1.5rem;
+    border: none;
+    background-color: antiquewhite;
+    border-bottom: 2px solid #000;
+    width: 100%;
+}
+
+input:focus {
+   border: none;
+   border-bottom: 2px solid rgb(5, 89, 208);
+   outline: none;
+}
+
+input[type="submit"] {
+    border: 1px solid black;
+    width: min-content;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+}
+
+.id-content{
+    width:fit-content;
+    height: fit-content;
+    line-height: 2rem;
+    padding: 2.5rem 3rem;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+  height: fit-content;
+  border: 1px solid black;
+}
+
+.id-content .id-content-head{
+    font-size: 1.2rem;
+    color: red;
+}
+
+footer {
+    margin-top: auto;
+    align-self: center;
+}
+
+.error404 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.fa-solid{
+    font-size: 2rem;
+    margin:15px 15px 0 0;
+    cursor: pointer;
+}
+
+.update-book {
+    text-align: center;
+    margin-top: 5rem;
+}

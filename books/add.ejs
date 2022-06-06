@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <!-- if use "=" it escapes special characters and we end up a string value instead of raw html -->
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="create-book">
+      <form action="/books" method="POST">
+        <div class="form-container">
+          <label for="title">Title:</label>
+          <input type="text" name="title" id="title" />
+          <br />
+          <label for="order">Order:</label>
+          <input type="text" name="order" id="order" />
+          <br />
+          <label for="completed">Completed:</label>
+          <input type="text" name="completed" id="completed" />
+          <br />
+          <label for="author">Author:</label>
+          <input type="text" name="author" id="author" />
+          <br />
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
